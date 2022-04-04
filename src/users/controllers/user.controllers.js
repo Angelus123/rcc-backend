@@ -15,9 +15,11 @@ const getUsers = async (req, res, next) => {
 
 const addUser = async (req, res, next) => {
   let articleInfo = {};
-  articleInfo.name = req.body.name;
+  articleInfo.firstName = req.body.firstName;
+  articleInfo.lastName = req.body.lastName;
   articleInfo.email = req.body.email;
   articleInfo.phone = req.body.phone;
+  articleInfo.comminityName = req.body.comminityName;
   articleInfo.password = req.body.password;
   articleInfo.confirmpassword = req.body.confirmPassword;
   articleInfo.createdAt = new Date().toISOString();
