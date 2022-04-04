@@ -3,9 +3,16 @@ import bcrypt from 'bcryptjs'
 import crypto from 'crypto'
 import mongoose from "mongoose";
     const userSchema = new mongoose.Schema({
-    name:{
+    firstName:{
         type: String,
         required: true,
+    },
+    lastName:{
+        type: String,
+        required: true,
+    },
+    comminityName:{
+        type: String,
     },
     phone:{
         type: String,
@@ -31,7 +38,7 @@ import mongoose from "mongoose";
         minlength: 8,
         select:false
     },
-    confirmpassword: {
+    confirmPassword: {
         type: String,
         select:false,
         required: [true,'Re-type  password'],
